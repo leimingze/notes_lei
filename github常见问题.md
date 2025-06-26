@@ -1,0 +1,24 @@
+# origin
+origin：远程仓库的“昵称”
+当你第一次把本地仓库关联到 GitHub 时（比如用 git remote add origin https://github.com/你/notes_lei.git），Git 就把这个 URL 记作 origin。
+以后你要推送（git push）或拉取（git pull）都默认对 origin 操作，就不用每次都敲一大串网址。
+```bash
+git remote -v
+
+origin  https://github.com/你/notes_lei.git (fetch)
+origin  https://github.com/你/notes_lei.git (push)
+```
+# branch
+branch：分支
+分支就像是一条独立的工作路线，允许你在不影响其他工作的情况下做改动。
+main（以前叫 master）是 Git 给第一条、最主要的分支默认起的名字，就好像小说的“正篇”。
+你在本地仓库里，默认情况下会在 main 这条线上写代码、提交历史。
+```bash
+git branch
+
+* main
+```
+# 推送到远端
+```bash
+git push origin main
+```
