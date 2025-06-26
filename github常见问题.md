@@ -22,3 +22,9 @@ git branch
 ```bash
 git push origin main
 ```
+# 流程
+```bash
+git add .  #把“工作区”中的改动（包括新文件）放入暂存区，告诉 Git 你要把它们包括到下次提交里。
+git commit -m "一句话描述这次改动" #把暂存区里的内容记录到 本地仓库，并附上这次改动的说明。
+git push origin main #把本地仓库的最新改动推送到远端仓库。
+```
