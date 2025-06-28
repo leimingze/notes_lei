@@ -18,13 +18,25 @@ git branch
 
 * main
 ```
-# 推送到远端
-```bash
-git push origin main
-```
-# 流程
+# push流程
 ```bash
 git add .  #把“工作区”中的改动（包括新文件）放入暂存区，告诉 Git 你要把它们包括到下次提交里。
 git commit -m "一句话描述这次改动" #把暂存区里的内容记录到 本地仓库，并附上这次改动的说明。
 git push origin main #把本地仓库的最新改动推送到远端仓库。
 ```
+# 仓库是私有的，如何clone
+## 配置SSH公钥认证
+1. 生成SSH公钥
+在服务器上生成SSH公钥
+```bash
+ssh-keygen -t rsa -C "<EMAIL>" -f ~/.ssh/<dir_name>
+```
+2. 查看公钥内容
+```bash
+cat ~/.ssh/<dir_name>
+```
+3. 复制公钥内容交给github账户，添加到SSH Keys
+4. 测试
+```bash
+ssh -T git@github.com
+```   
