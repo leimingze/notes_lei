@@ -346,6 +346,26 @@ def greet(name):
 ## 内置装饰器
 @staticmethod 和java的静态方法一样
 @classmethod 
+# 奇怪的语法
+## isinstance 和 type 的区别
+```py
+isinstance(obj, class_or_tuple) # 判断obj是否是class或class的子类
 
+##example
+class Animal: pass
+class Dog(Animal): pass
+
+d = Dog()
+print(type(d) == Animal)    # False（严格匹配类型）
+print(isinstance(d, Animal))# True（识别继承关系）
+
+```
+## *list
+```py
+*list 表示将list拆开作为位置参数传入
+## example
+list=[1,2,3,4,5]
+foo(*list)等价于foo(1,2,3,4,5)
+```
 
 
